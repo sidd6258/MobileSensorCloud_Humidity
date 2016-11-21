@@ -1,0 +1,84 @@
+<div id="doc" class="" ng-controller="HomeController">
+
+    <div class="form">
+      
+      <ul class="tab-group">
+        <li class="tab active"><a href="#signup">Sign Up</a></li>
+        <li class="tab"><a ng-click="login();">Log In</a></li>
+      </ul>
+      
+      <div class="tab-content">
+        <div id="signup">   
+          <h1>Sign Up for Free</h1>
+          
+          <form >
+          
+          <div class="top-row">
+            <div class="field-wrap">
+              <input type="text" ng-model="firstname" placeholder="First Name" required autocomplete="off" />
+            </div>
+        
+            <div class="field-wrap">
+
+              <input type="text" ng-model="lastname" placeholder="Last Name" required autocomplete="off"/>
+            </div>
+          </div>
+			<div class="field-wrap">
+            <input type="text" ng-model="phoneno" placeholder="Phone No." required autocomplete="off"/>
+          </div>
+          <div class="field-wrap">
+            <input type="text" ng-model="street" placeholder="Street" required autocomplete="off"/>
+          </div>
+          <div class="field-wrap">
+            <input type="text" ng-model="city" placeholder="City/Country/Zip-Code" required autocomplete="off"/>
+          </div>
+          
+          <div class="field-wrap">
+            <input type="email" ng-model="email" placeholder="Email Address" autocomplete="off"/>
+          </div>
+          
+          <div class="field-wrap">
+            <input type="password" ng-model="password" placeholder="Set A Password" required autocomplete="off"/>
+          </div>
+          
+          <button type="submit" ng-click="submit();" class="button button-block"/>Get Started</button>
+          
+          </form>
+
+        </div>
+        
+        <div id="login">   
+          <h1>Welcome Back!</h1>
+          
+          <form>
+          
+            <div class="field-wrap">
+            <label>
+              Email Address<span class="req">*</span>
+            </label>
+            <input type="email"required autocomplete="off"/>
+          </div>
+          
+          <div class="field-wrap">
+            <label>
+              Password<span class="req">*</span>
+            </label>
+            <input type="password"required autocomplete="off"/>
+          </div>
+          
+          <p class="forgot"><a href="#">Forgot Password?</a></p>
+          <form action="/index.jsp">
+          <button class="button button-block" />Log In</button>
+          </form>
+          </form>
+
+        </div>
+        
+      </div><!-- tab-content -->
+      
+</div> <!-- /form -->
+    
+
+        
+  </div>
+
