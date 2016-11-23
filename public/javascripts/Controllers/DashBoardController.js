@@ -1,4 +1,4 @@
-mbsHumidity.controller("DashBoardController", function($scope,$http,$location,$window){
+mbsHumidity.controller("DashBoardController", function($scope,$http,$location,$window,$route){
 	$scope.sensor = function(id) {
 		console.log("Sensor Id is: "+id);
 		$window.sessionStorage.sensorId=id;
@@ -9,5 +9,8 @@ mbsHumidity.controller("DashBoardController", function($scope,$http,$location,$w
 		console.log("Hi in billing");
 		$location.path("/billing");				
 	};
-			
+	$scope.dashboard=function(){
+		console.log("dashboard from dashboard");
+		$route.reload();		
+	}
 });

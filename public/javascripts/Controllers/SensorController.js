@@ -81,4 +81,8 @@ mbsHumidity.controller("SensorController", function($scope,$http,$location,$wind
 		console.log("Sensor Id is: "+$window.sessionStorage.sensorId);
 		$route.reload();				
 	};		
+	$scope.dashboard=function(){
+		console.log("dashboard from sensor");
+		$location.path("/dashboard");
+	}
 });
