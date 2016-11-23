@@ -1,4 +1,4 @@
-mbsHumidity.controller("SensorController", function($scope,$http,$location,$window){
+mbsHumidity.controller("SensorController", function($scope,$http,$location,$window,$route){
 	$scope.populate=function()
 	{		
 		var city;
@@ -75,5 +75,10 @@ mbsHumidity.controller("SensorController", function($scope,$http,$location,$wind
 		$location.path("/billing");				
 	};
 
-			
+	$scope.sensor = function(id) {
+		console.log("Sensor Id is: "+id);
+		$window.sessionStorage.sensorId=id;
+		console.log("Sensor Id is: "+$window.sessionStorage.sensorId);
+		$route.reload();				
+	};		
 });
