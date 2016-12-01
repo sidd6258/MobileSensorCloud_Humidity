@@ -8,10 +8,15 @@ var express = require('express')
   , user = require('./routes/user')
   , http = require('http')
   , path = require('path')
-  , home = require('./routes/home');
+  , home = require('./routes/home')
+  , mysql= require('./routes/mysql');
 var app = express();
 var session = require('express-session');
 var ejs=require("ejs");
+
+mysql.createConnectionPool();
+
+
 // all environments
 app.set('port', process.env.PORT || 3000);
 app.set('views', __dirname + '/views');
@@ -20,10 +25,13 @@ app.use(express.favicon());
 app.use(express.logger('dev'));
 app.use(express.bodyParser());
 app.use(express.methodOverride());
+app.use(express.cookieParser('9876534'));
+app.use(express.session());
 app.use(app.router);
 app.use(express.static(path.join(__dirname, 'public')));
+
 app.use(session({
-	secret : '98765',
+	secret : '9876534',
 	resave : false,
 	saveUninitialized : false,
 	cookie:{maxAge : 600000,rolling : true}
