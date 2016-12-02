@@ -43,6 +43,7 @@ if ('development' == app.get('env')) {
 
 app.get('/', routes.index);
 app.get('/users', user.list);
+app.get('/loadSensor', home.loadSensor);
 app.post('/afterSignIn', home.afterSignIn);
 app.post('/afterSignUp', home.afterSignUp);
 

@@ -2,7 +2,7 @@
 exports.db= {
 	    "host"     : 'localhost',
 	    "user"     : 'root',
-	    "password" : 'root',
+	    "password" : 'Dhva1985',
 	    "database" : 'sensorcloud',
 	    "port"	 : 3306
 	};
