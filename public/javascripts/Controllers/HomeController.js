@@ -10,8 +10,8 @@ mbsHumidity.controller("HomeController", function($scope,$http,$location){
          data: { "firstname": $scope.firstname,
         	 "lastname": $scope.lastname,
         	 "phoneno": $scope.phoneno,
-        	 "street": $scope.street,
-        	 "city": $scope.city,
+        	 "address": $scope.street,
+        	 "zipcode": $scope.city,
         	 "email": $scope.email, 
         	 "password": $scope.password }
          }).success(function (data, status, headers, config) {
